@@ -13,17 +13,26 @@ let numberInValue = Number(score);
 //console.log(numberInValue);
 
 //* 2. Boolean() conversion
-// let isLoggedIn = 1; //after Boolean(). type => boolean. value => 1 
-// let isLoggedIn = "ni7"; //after Boolean(). type => boolean. value => true 
-//  let isLoggedIn = ""; //after Boolean(). type => boolean. value => false 
- let isLoggedIn = {}; //after Boolean(). type => boolean. value => true. Note: empty object is truthy value in JavaScript
-  
+// let isLoggedIn = 1; //after Boolean(). type => boolean. value => 1
+// let isLoggedIn = "ni7"; //after Boolean(). type => boolean. value => true
+//  let isLoggedIn = ""; //after Boolean(). type => boolean. value => false
+let isLoggedIn = {}; //after Boolean(). type => boolean. value => true. Note: empty object is truthy value in JavaScript
 
-console.log(typeof isLoggedIn);
+//console.log(typeof isLoggedIn);
 
 let booleanIsLoggedIn = Boolean(isLoggedIn);
-console.log(typeof booleanIsLoggedIn);
-console.log(booleanIsLoggedIn);
+//console.log(typeof booleanIsLoggedIn);
+//console.log(booleanIsLoggedIn);
+
+//* 3. String() conversion
+let str = 33; //after String(). type => string. value => 33
+
+// console.log(typeof str);
+
+let stringNumber = String(str);
+
+// console.log(typeof stringNumber);
+// console.log(stringNumber);
 
 /**NaN
  ** NaN
@@ -43,3 +52,31 @@ function checkEvenOdd(num) {
     : `${num} is an odd number.`;
 }
 //console.log(checkEvenOdd("2"));
+
+// *************************** Operations **************************************
+
+let value = 3;
+let negValue = -value;
+console.log(negValue);
+
+//* basic math operations
+// console.log(2 + 2);
+// console.log(2 - 2);
+// console.log(2 * 2);
+// console.log(2 ** 3); // 2 to the power 3
+// console.log(2 / 3);
+// console.log(2 % 3);
+
+console.log("1" + 2); // it will do string concatenation by converting the number value to string.
+console.log(1 + "2"); // same as the previous one
+
+console.log("1" + 2 + 2); // it will product 122 in string. the 1st value is string so all are converted to string and then concatenated. 
+console.log(1+2+"2"); // it will product 32 in string. 1st 2 values will be added and product 3 and then concatenated with string value 2. if last value is string then this happened.
+
+console.log(1+"2"+2); // it will product 122
+
+console.log(1+2+"3"+2); // it will product 332. 1 + 2 is evaluated as a numeric expression, resulting in 3. 3 + "3" is evaluated as a string concatenation, because the + operator is overloaded to perform concatenation when one of the operands is a string. This results in the string "33". "33" + 2 is again evaluated as a string concatenation, resulting in the string "332".
+
+console.log(+true) // it will product 1
+console.log(+"") // it will product 0
+
