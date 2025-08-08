@@ -86,7 +86,9 @@ const userObj = {
   },
 };
 
-// * Shallow copy
+// * Shallow copy 
+// ! read here: https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy
+
 // const cloneUserObj = Object.assign({},userObj)
 const cloneUserObj = { ...userObj };
 
@@ -113,6 +115,8 @@ clone:  {
 */
 
 //* Deep copy
+// ! read here: https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy
+
 const deepCloneUserObj = JSON.parse(JSON.stringify(userObj));
 console.log("original: ", userObj);
 
