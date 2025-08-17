@@ -1,0 +1,1 @@
+//**  Prototype: In JavaScript, a prototype is a mechanism through which objects inherit properties and methods from other objects. 
